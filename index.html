@@ -1,0 +1,29 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hello React</title>
+</head>
+
+<body>
+    <div id="root">
+        <h1>First React page rendering...</h1>
+    </div>
+
+    <script crossorigin="" src="https://unpkg.com/react@16/umd/react.development.js"></script>
+
+    <script crossorigin="" src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <script>
+        //Funcion que devuelve un elemento React
+        const App = () => {
+            //Create Element (tag,props,elements) , los elementos puede ser texto u otros elementos anidados con create
+            return React.createElement("h1",{},"Our First React page has rendered");
+        };
+
+        //Renderizar el elemento en el div root del html mediante el DOM
+        ReactDOM.render(React.createElement(App),document.getElementById("root"));
+    </script>
+</body>
+
+</html>
